@@ -62,7 +62,7 @@ def validate_ip_address(self, queryIP: str) -> str:
         else:
             return 'Neither'
 
-#Reverse Words in a String - Solution 1
+# problem 3: Reverse Words in a String - Solution 1
 def reverseWords1(self, s: str) -> str:
     s_arr = s.strip().split(" ")
     reverse_word = ""
