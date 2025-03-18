@@ -100,6 +100,17 @@ def has_unique_chars(s: str) -> bool:
     return True
 
 
+# Problem 5: Is Subsequence
+
+def isSubsequence(s: str, t: str) -> bool:
+    i = j = 0
+
+    while i < len(s) and j < len(t):
+        if s[i] == t[j]:
+            i+=1
+        j+=1
+    return i == len(s)
+
 
 
 arr: list[int] = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -114,3 +125,9 @@ str1 = "abcdefgh"
 str2 = "aabbjhjgfg"
 print("Is the string ", str1, "has unique characters? :", has_unique_chars(str1))
 print("Is the string ", str2, "has unique characters? :", has_unique_chars(str2))
+
+s1 = "abc"
+s2 = "axc"
+t = "ahbgdc"
+print("Is the string s ", s1 , "is subsequence of string t ", t , " :: ", isSubsequence(s1,t))
+print("Is the string s ", s2 , "is subsequence of string t ", t , " :: ", isSubsequence(s2,t))
